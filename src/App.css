@@ -9,6 +9,7 @@
 body {
   /* background-color: blueviolet; */
   background-image: linear-gradient(rgb(50, 140, 243), rgb(248, 248, 248));
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -33,7 +34,8 @@ body {
 }
 
 .ul_nav {
-  margin-top: 100px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
 }

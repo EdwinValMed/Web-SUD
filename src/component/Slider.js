@@ -1,36 +1,22 @@
 import React from "react";
-import style from "./Slider.module.css";
+import Slider from "infinite-react-carousel";
+/* import style from "./Slider.module.css"; */
+import "./Slider.css";
 
-const Slider = ({ imagenes }) => {
-  const [imagenActual, setImagenActual] = React.useState(0);
-
-  const cantidad = imagenes?.length;
-
-  if (!Array.isArray(imagenes) || cantidad === 0) return;
-
-  const siguienteImagen = () => {
-    setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
-  };
-
-  const anteriorImagen = () => {
-    setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
-  };
-
+const Sliderr = ({ images }) => {
   return (
-    <div className={style.container}>
-      <button onClick={anteriorImagen}>←</button>
-      {imagenes.map((imagen, index) => {
-        return (
-          <div>
-            {imagenActual === index && (
-              <img key={index} src={imagen} alt="imagen" />
-            )}
+    <section className="slider">
+      <h1 className="slider__title">Carousel con infinite-react-carousel</h1>
+      <Slider className="slider__content">
+        {images.map((images) => (
+          <div key={images.id} className="slider__content--item">
+            <img src={images.images} alt={images.title} />
+            <p className="slider-description">{images.title}</p>
           </div>
-        );
-      })}
-      <button onClick={siguienteImagen}>→</button>
-    </div>
+        ))}
+      </Slider>
+    </section>
   );
 };
 
-export default Slider;
+export default Sliderr;

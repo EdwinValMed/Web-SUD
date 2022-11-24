@@ -1,12 +1,12 @@
 .slider {
-  width: 30%;
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
 .slider__title {
   position: absolute;
-  width: 90%;
+  width: 100%;
   text-align: center;
   top: 4rem;
   color: #fff;
@@ -17,21 +17,21 @@
 }
 .slider__content,
 .slider__content--item {
-  width: 90%;
+  width: 100%;
   height: 100vh;
   position: relative;
 }
 
-.slider__content__item img {
-  width: 90%;
-  height: 90%;
+.slider__content--item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.slider_description {
+.slider-description {
   position: absolute;
   bottom: 5rem;
-  width: 90%;
+  width: 100%;
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
